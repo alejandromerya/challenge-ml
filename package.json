@@ -1,0 +1,22 @@
+{
+  "name": "challenge-ml",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Alejandro Mery",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.14.16",
+    "aws-sdk": "^2.780.0",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.2.1",
+    "typescript": "^4.8.4",
+    "ts-node": "10.9.1",
+    "dotenv": "16.0.3"
+  },
+  "scripts": {
+    "build": "tsc --sourceMap false",
+    "deploy": "rm -r build && yarn build && yarn build:db_layer && sam deploy && rm -r build"
+  }
+}
